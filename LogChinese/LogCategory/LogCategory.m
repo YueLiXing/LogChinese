@@ -7,11 +7,26 @@
 //
 
 #import "LogCategory.h"
+#import <objc/runtime.h>
 
 
 @implementation NSArray (Log)
 
 #ifdef UseLogChinese
+
++ (IMP)getSelectorIMP:(SEL)selector {
+    return class_getMethodImplementation([self class], selector);
+}
+
+- (NSString *)description {
+    return [NSString stringWithFormat:@"Old <%@ %p> %@", self.className, self, [self descriptionWithLocale:nil]];
+}
+
+- (NSString *)newDescription {
+    return [NSString stringWithFormat:@"New <%@ %p> %@", self.className, self, [self descriptionWithLocale:nil]];
+}
+
+
 - (NSString *)descriptionWithLocale:(id)locale {
     NSMutableString * string = [NSMutableString string];
     [string appendString:@"[\n"];
@@ -44,6 +59,9 @@
 @implementation NSDictionary (Log)
 
 #ifdef UseLogChinese
+- (NSString *)description {
+    return [NSString stringWithFormat:@"<%@ %p> %@", self.className, self, [self descriptionWithLocale:nil]];
+}
 - (NSString *)descriptionWithLocale:(id)locale {
     NSMutableString * string = [NSMutableString string];
     [string appendString:@"{\n"];
@@ -73,4 +91,30 @@
 }
 
 #endif
+@end
+
+
+@interface LogHelper : NSObject
+
+@end
+
+@implementation LogHelper
+
+//+ (void)load {
+//    static dispatch_once_t onceToken;
+//    dispatch_once(&onceToken, ^{
+//        NSLog(@"Start Hook");
+//        @try {
+//            Method desMethod = class_getInstanceMethod([NSArray class], @selector(description));
+//            IMP newImp = [NSArray getSelectorIMP:@selector(newDescription)];
+//            method_setImplementation(desMethod, newImp);
+//            NSLog(@"End Hook");
+//        } @catch (NSException *exception) {
+//            NSLog(@"%@", exception);
+//        } @finally {
+//            
+//        }
+//    });
+//}
+
 @end
