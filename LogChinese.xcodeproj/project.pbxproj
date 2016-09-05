@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CD45FD391D7D236D00E6C4E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD45FD381D7D236D00E6C4E6 /* main.m */; };
-		CD45FD421D7D23CF00E6C4E6 /* LogCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CD45FD411D7D23CF00E6C4E6 /* LogCategory.m */; };
-		CD45FD451D7D23FA00E6C4E6 /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = CD45FD441D7D23FA00E6C4E6 /* Test.m */; };
+		CD45FD4C1D7D25AE00E6C4E6 /* LogCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CD45FD481D7D25AE00E6C4E6 /* LogCategory.m */; };
+		CD45FD4D1D7D25AE00E6C4E6 /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = CD45FD4B1D7D25AE00E6C4E6 /* Test.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,10 +27,10 @@
 /* Begin PBXFileReference section */
 		CD45FD351D7D236D00E6C4E6 /* LogChinese */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LogChinese; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD45FD381D7D236D00E6C4E6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		CD45FD401D7D23CF00E6C4E6 /* LogCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogCategory.h; sourceTree = "<group>"; };
-		CD45FD411D7D23CF00E6C4E6 /* LogCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogCategory.m; sourceTree = "<group>"; };
-		CD45FD431D7D23FA00E6C4E6 /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
-		CD45FD441D7D23FA00E6C4E6 /* Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
+		CD45FD471D7D25AE00E6C4E6 /* LogCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogCategory.h; sourceTree = "<group>"; };
+		CD45FD481D7D25AE00E6C4E6 /* LogCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogCategory.m; sourceTree = "<group>"; };
+		CD45FD4A1D7D25AE00E6C4E6 /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
+		CD45FD4B1D7D25AE00E6C4E6 /* Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,21 +63,29 @@
 		CD45FD371D7D236D00E6C4E6 /* LogChinese */ = {
 			isa = PBXGroup;
 			children = (
+				CD45FD461D7D25AE00E6C4E6 /* LogCategory */,
+				CD45FD491D7D25AE00E6C4E6 /* TestModel */,
 				CD45FD381D7D236D00E6C4E6 /* main.m */,
-				CD45FD431D7D23FA00E6C4E6 /* Test.h */,
-				CD45FD441D7D23FA00E6C4E6 /* Test.m */,
-				CD45FD3F1D7D23B100E6C4E6 /* Tool */,
 			);
 			path = LogChinese;
 			sourceTree = "<group>";
 		};
-		CD45FD3F1D7D23B100E6C4E6 /* Tool */ = {
+		CD45FD461D7D25AE00E6C4E6 /* LogCategory */ = {
 			isa = PBXGroup;
 			children = (
-				CD45FD401D7D23CF00E6C4E6 /* LogCategory.h */,
-				CD45FD411D7D23CF00E6C4E6 /* LogCategory.m */,
+				CD45FD471D7D25AE00E6C4E6 /* LogCategory.h */,
+				CD45FD481D7D25AE00E6C4E6 /* LogCategory.m */,
 			);
-			name = Tool;
+			path = LogCategory;
+			sourceTree = "<group>";
+		};
+		CD45FD491D7D25AE00E6C4E6 /* TestModel */ = {
+			isa = PBXGroup;
+			children = (
+				CD45FD4A1D7D25AE00E6C4E6 /* Test.h */,
+				CD45FD4B1D7D25AE00E6C4E6 /* Test.m */,
+			);
+			path = TestModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +144,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD45FD451D7D23FA00E6C4E6 /* Test.m in Sources */,
-				CD45FD421D7D23CF00E6C4E6 /* LogCategory.m in Sources */,
+				CD45FD4D1D7D25AE00E6C4E6 /* Test.m in Sources */,
+				CD45FD4C1D7D25AE00E6C4E6 /* LogCategory.m in Sources */,
 				CD45FD391D7D236D00E6C4E6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

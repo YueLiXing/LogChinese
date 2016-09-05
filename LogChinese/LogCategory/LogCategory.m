@@ -8,11 +8,10 @@
 
 #import "LogCategory.h"
 
-#define IsDebug
 
 @implementation NSArray (Log)
 
-#ifdef IsDebug
+#ifdef UseLogChinese
 - (NSString *)descriptionWithLocale:(id)locale {
     NSMutableString * string = [NSMutableString string];
     [string appendString:@"[\n"];
@@ -44,7 +43,7 @@
 
 @implementation NSDictionary (Log)
 
-#ifdef IsDebug
+#ifdef UseLogChinese
 - (NSString *)descriptionWithLocale:(id)locale {
     NSMutableString * string = [NSMutableString string];
     [string appendString:@"{\n"];
