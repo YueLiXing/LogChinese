@@ -20,23 +20,22 @@ int main(int argc, const char * argv[]) {
     NSMutableDictionary * dictM = [[NSMutableDictionary alloc] initWithDictionary:dict];
     [dictM setObject:[Test new] forKey:@"newkey"];
     NSLog(@"%@", array);
-    NSLog(@"%@", [array description]);
-//    NSLog(@"%@", dictM);
-//    NSLog(@"%@", @[dictM, @{
-//                       @"key": @2
-//                       }]);
-//    NSLog(@"%@", @[array, array]);
-//    NSLog(@"%@", @[
-//  @[
-//  @[
-//  @[
-//      @"你好"
-//      ]
-//  ],@1,@"asd"
-//  ],@{
-//      @"namge":@"星星老师",
-//      @"image":[Test new]
-//      }
-//  ]);
+    NSLog(@"%@", dictM);
+    NSLog(@"%@", @[dictM, @{
+                       @"key": @2
+                       }]);
+    NSLog(@"%@", @[array, array]);
+    NSLog(@"%@", @[
+  @[
+  @[
+  @[
+      @"你好"
+      ]
+  ],@1,@"asd"
+  ],@{
+      @"namge":@"星星老师",
+      @"image":[Test new]
+      }
+  ]);
     return 0;
 }
