@@ -19,7 +19,7 @@
 }
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"<%@ %p> %@", self.className, self, [self descriptionWithLocale:nil]];
+    return [NSString stringWithFormat:@"<%@ %p> %@", NSStringFromClass([self class]), self, [self descriptionWithLocale:nil]];
 }
 
 - (NSString *)descriptionWithLocale:(id)locale {
@@ -59,7 +59,7 @@
     return [self description];
 }
 - (NSString *)description {
-    return [NSString stringWithFormat:@"<%@ %p> %@", self.className, self, [self descriptionWithLocale:nil]];
+    return [NSString stringWithFormat:@"<%@ %p> %@", NSStringFromClass([self class]), self, [self descriptionWithLocale:nil]];
 }
 - (NSString *)descriptionWithLocale:(id)locale {
     NSMutableString * string = [NSMutableString string];
