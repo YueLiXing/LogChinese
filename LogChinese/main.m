@@ -19,7 +19,10 @@ int main(int argc, const char * argv[]) {
                             };
     NSMutableDictionary * dictM = [[NSMutableDictionary alloc] initWithDictionary:dict];
     [dictM setObject:[Test new] forKey:@"newkey"];
+    NSLog(@"%@", array);
     NSLog(@"%@", dictM);
-    NSLog(@"%@", @[dictM, dictM]);
+    NSLog(@"%@", @[dictM, @{
+                       @"key": @2
+                       }]);
     return 0;
 }
