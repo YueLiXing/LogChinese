@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>LogChinese.xcscheme</key>
+		<key>LogChinese_iOS.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>CD45FD341D7D236D00E6C4E6</key>
+		<key>CD4D81ED1D82A49A00D7DCB9</key>
 		<dict>
 			<key>primary</key>
 			<true/>

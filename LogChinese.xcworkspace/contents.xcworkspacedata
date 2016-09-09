@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:LogChinese_OS/LogChinese_OS.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:LogChinese_iOS/LogChinese_iOS.xcodeproj">
+   </FileRef>
+</Workspace>

@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CD45FD341D7D236D00E6C4E6"
-               BuildableName = "LogChinese"
-               BlueprintName = "LogChinese"
-               ReferencedContainer = "container:LogChinese.xcodeproj">
+               BlueprintIdentifier = "CD4D81ED1D82A49A00D7DCB9"
+               BuildableName = "LogChinese_iOS.app"
+               BlueprintName = "LogChinese_iOS"
+               ReferencedContainer = "container:LogChinese_iOS.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CD45FD341D7D236D00E6C4E6"
-            BuildableName = "LogChinese"
-            BlueprintName = "LogChinese"
-            ReferencedContainer = "container:LogChinese.xcodeproj">
+            BlueprintIdentifier = "CD4D81ED1D82A49A00D7DCB9"
+            BuildableName = "LogChinese_iOS.app"
+            BlueprintName = "LogChinese_iOS"
+            ReferencedContainer = "container:LogChinese_iOS.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CD45FD341D7D236D00E6C4E6"
-            BuildableName = "LogChinese"
-            BlueprintName = "LogChinese"
-            ReferencedContainer = "container:LogChinese.xcodeproj">
+            BlueprintIdentifier = "CD4D81ED1D82A49A00D7DCB9"
+            BuildableName = "LogChinese_iOS.app"
+            BlueprintName = "LogChinese_iOS"
+            ReferencedContainer = "container:LogChinese_iOS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CD45FD341D7D236D00E6C4E6"
-            BuildableName = "LogChinese"
-            BlueprintName = "LogChinese"
-            ReferencedContainer = "container:LogChinese.xcodeproj">
+            BlueprintIdentifier = "CD4D81ED1D82A49A00D7DCB9"
+            BuildableName = "LogChinese_iOS.app"
+            BlueprintName = "LogChinese_iOS"
+            ReferencedContainer = "container:LogChinese_iOS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
