@@ -15,7 +15,7 @@
 #ifdef UseLogChinese
 
 - (NSString *)debugDescription {
-    return [self description];
+    return [NSString stringWithFormat:@"<%@ %p> %@", NSStringFromClass([self class]), self, [self descriptionWithLocale:nil]];
 }
 
 - (NSString *)description {
@@ -56,7 +56,7 @@
 #ifdef UseLogChinese
 
 - (NSString *)debugDescription {
-    return [self description];
+    return [NSString stringWithFormat:@"<%@ %p> %@", NSStringFromClass([self class]), self, [self descriptionWithLocale:nil]];
 }
 - (NSString *)description {
     return [NSString stringWithFormat:@"<%@ %p> %@", NSStringFromClass([self class]), self, [self descriptionWithLocale:nil]];
