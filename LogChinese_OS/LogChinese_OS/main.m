@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "LogCategory.h"
+#import "Logger.h"
 #import "Test.h"
 
 int main(int argc, const char * argv[]) {

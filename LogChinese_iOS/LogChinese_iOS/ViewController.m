@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "TestView.h"
+#import "Logger.h"
 
 @interface ViewController ()
 
