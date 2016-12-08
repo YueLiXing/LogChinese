@@ -7,4 +7,7 @@
    <FileRef
       location = "group:LogChinese_iOS/LogChinese_iOS.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:LogChinese_Swift/LogChinese_Swift.xcodeproj">
+   </FileRef>
 </Workspace>
