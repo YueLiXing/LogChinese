@@ -11,6 +11,7 @@
 		CDDA375D1DE6E2E400D59B4E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDA375C1DE6E2E400D59B4E /* Logger.swift */; };
 		CDDA375F1DE6E2FA00D59B4E /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDA375E1DE6E2FA00D59B4E /* Test.swift */; };
 		CDDA37641DE6EA5C00D59B4E /* LogCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDA37631DE6EA5C00D59B4E /* LogCategory.m */; };
+		CDE519D11E0387DE007E8B32 /* LogCategorySwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE519D01E0387DE007E8B32 /* LogCategorySwift.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +34,7 @@
 		CDDA37611DE6EA5B00D59B4E /* LogChinese_Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LogChinese_Swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		CDDA37621DE6EA5C00D59B4E /* LogCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogCategory.h; sourceTree = "<group>"; };
 		CDDA37631DE6EA5C00D59B4E /* LogCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogCategory.m; sourceTree = "<group>"; };
+		CDE519D01E0387DE007E8B32 /* LogCategorySwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogCategorySwift.swift; path = LogChinese_Swift/LogCategorySwift.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				CDDA37621DE6EA5C00D59B4E /* LogCategory.h */,
 				CDDA37631DE6EA5C00D59B4E /* LogCategory.m */,
 				CDDA37611DE6EA5B00D59B4E /* LogChinese_Swift-Bridging-Header.h */,
+				CDE519D01E0387DE007E8B32 /* LogCategorySwift.swift */,
 			);
 			name = LogCategory;
 			path = ..;
@@ -147,6 +150,7 @@
 				CDDA37641DE6EA5C00D59B4E /* LogCategory.m in Sources */,
 				CDDA37561DE6E28B00D59B4E /* main.swift in Sources */,
 				CDDA375D1DE6E2E400D59B4E /* Logger.swift in Sources */,
+				CDE519D11E0387DE007E8B32 /* LogCategorySwift.swift in Sources */,
 				CDDA375F1DE6E2FA00D59B4E /* Test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
