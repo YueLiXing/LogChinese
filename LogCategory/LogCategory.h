@@ -19,3 +19,7 @@
 @interface NSDictionary (Log)
 
 @end
+
+@interface NSSet (Log)
+
+@end

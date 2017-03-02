@@ -42,5 +42,15 @@ int main(int argc, const char * argv[]) {
     //                       @"image":[Test new]
     //                       }
     //                   ]);
+    NSSet * tempSet = [NSSet setWithObjects:@"小明", @"小红", @"按asd", nil];
+    NSLog(@"%@", tempSet);
+    
+    NSMutableSet * muSet = [NSMutableSet set];
+    [muSet addObject:[Test new]];
+    [muSet addObject:@"[Test new]"];
+    [muSet addObject:@1];
+    NSLog(@"%@", muSet);
+    
+    
     return 0;
 }
