@@ -7,7 +7,7 @@
 //
 
 #import "LogCategory.h"
-#import <objc/runtime.h>
+//#import <objc/runtime.h>
 
 static NSString * const kLxArrayBegin = @"[";
 static NSString * const kLxArrayEnd = @"]";
@@ -71,7 +71,8 @@ static NSString * const kLxSetEnd = @")}";
     NSMutableString * string = [NSMutableString string];
     [string appendFormat:@"%@\n", kLxDictionaryBegin];
     NSUInteger count = self.allKeys.count;
-    for (id key in self.allKeys) {
+    NSArray * allKey = [self.allKeys sortedArrayUsingSelector:@selector(compare:)];
+    for (id key in allKey) {
         NSInteger index = [self.allKeys indexOfObject:key];
         id value = [self objectForKey:key];
         NSString * temp = nil;
