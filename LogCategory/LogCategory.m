@@ -71,8 +71,18 @@ static NSString * const kLxSetEnd = @")}";
     NSMutableString * string = [NSMutableString string];
     [string appendFormat:@"%@\n", kLxDictionaryBegin];
     NSUInteger count = self.allKeys.count;
-    NSArray * allKey = [self.allKeys sortedArrayUsingSelector:@selector(compare:)];
-    for (id key in allKey) {
+    NSArray * allKeys = self.allKeys;
+    BOOL canCom = YES;
+    for (id temp in allKeys) {
+        if ([temp respondsToSelector:@selector(compare:)] == NO) {
+            canCom = NO;
+            break;
+        }
+    }
+    if (canCom) {
+        allKeys = [self.allKeys sortedArrayUsingSelector:@selector(compare:)];
+    }
+    for (id key in allKeys) {
         NSInteger index = [self.allKeys indexOfObject:key];
         id value = [self objectForKey:key];
         NSString * temp = nil;
