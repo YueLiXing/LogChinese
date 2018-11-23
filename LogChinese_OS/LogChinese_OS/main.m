@@ -16,7 +16,8 @@ int main(int argc, const char * argv[]) {
     NSArray * array= @[@"数组元素0", @"数组元素1   ", @28];
     NSDictionary * dict = @{
                             @"name": @"asdh\n红",
-                            @"array": array
+                            @"array": array,
+                            @"b": @"b-value"
                             };
     NSMutableDictionary * dictM = [[NSMutableDictionary alloc] initWithDictionary:dict];
     [dictM setObject:[Test new] forKey:@"newkey"];

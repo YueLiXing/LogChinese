@@ -83,7 +83,7 @@ static NSString * const kLxSetEnd = @")}";
         allKeys = [self.allKeys sortedArrayUsingSelector:@selector(compare:)];
     }
     for (id key in allKeys) {
-        NSInteger index = [self.allKeys indexOfObject:key];
+        NSInteger index = [allKeys indexOfObject:key];
         id value = [self objectForKey:key];
         NSString * temp = nil;
         if ([value respondsToSelector:@selector(descriptionWithLocale:)]) {
