@@ -70,18 +70,24 @@ static NSString * const kLxSetEnd = @")}";
 - (NSString *)descriptionWithLocale:(id)locale {
     NSMutableString * string = [NSMutableString string];
     [string appendFormat:@"%@\n", kLxDictionaryBegin];
-    NSUInteger count = self.allKeys.count;
-    NSArray * allKeys = self.allKeys;
-    BOOL canCom = YES;
-    for (id temp in allKeys) {
-        if ([temp respondsToSelector:@selector(compare:)] == NO) {
-            canCom = NO;
-            break;
+    NSArray * allKeys = nil;
+    if (UseLogChineseSort) {
+        BOOL canCom = YES;
+        for (id temp in allKeys) {
+            if ([temp respondsToSelector:@selector(compare:)] == NO) {
+                canCom = NO;
+                break;
+            }
         }
+        if (canCom) {
+            allKeys = [self.allKeys sortedArrayUsingSelector:@selector(compare:)];
+        } else {
+            allKeys = self.allKeys;
+        }
+    } else {
+        allKeys = self.allKeys;
     }
-    if (canCom) {
-        allKeys = [self.allKeys sortedArrayUsingSelector:@selector(compare:)];
-    }
+    NSUInteger count = allKeys.count;
     for (id key in allKeys) {
         NSInteger index = [allKeys indexOfObject:key];
         id value = [self objectForKey:key];
