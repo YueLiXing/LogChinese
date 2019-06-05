@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CDA9823321C2431000497DFF /* LogCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA9823221C2431000497DFF /* LogCategory.swift */; };
 		CDDA37561DE6E28B00D59B4E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDA37551DE6E28B00D59B4E /* main.swift */; };
 		CDDA375D1DE6E2E400D59B4E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDA375C1DE6E2E400D59B4E /* Logger.swift */; };
 		CDDA375F1DE6E2FA00D59B4E /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDA375E1DE6E2FA00D59B4E /* Test.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CDA9823221C2431000497DFF /* LogCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCategory.swift; sourceTree = "<group>"; };
 		CDDA37521DE6E28B00D59B4E /* LogChinese_Swift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LogChinese_Swift; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDDA37551DE6E28B00D59B4E /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		CDDA375C1DE6E2E400D59B4E /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				CDDA375C1DE6E2E400D59B4E /* Logger.swift */,
 				CDDA375E1DE6E2FA00D59B4E /* Test.swift */,
 				CDDA37551DE6E28B00D59B4E /* main.swift */,
+				CDA9823221C2431000497DFF /* LogCategory.swift */,
 			);
 			path = LogChinese_Swift;
 			sourceTree = "<group>";
@@ -127,6 +130,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = CDDA37491DE6E28B00D59B4E;
@@ -145,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDDA37641DE6EA5C00D59B4E /* LogCategory.m in Sources */,
+				CDA9823321C2431000497DFF /* LogCategory.swift in Sources */,
 				CDDA37561DE6E28B00D59B4E /* main.swift in Sources */,
 				CDDA375D1DE6E2E400D59B4E /* Logger.swift in Sources */,
 				CDDA375F1DE6E2FA00D59B4E /* Test.swift in Sources */,
@@ -253,7 +258,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "LogChinese_Swift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -266,7 +271,7 @@
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "LogChinese_Swift-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

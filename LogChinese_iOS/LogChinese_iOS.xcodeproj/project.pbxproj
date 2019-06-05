@@ -17,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CD3DA67A22A7B99900D2B29E /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
 		CD4D81EE1D82A49A00D7DCB9 /* LogChinese_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LogChinese_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD4D81F21D82A49A00D7DCB9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CD4D81F41D82A49A00D7DCB9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -30,7 +31,6 @@
 		CD4D82291D82A57000D7DCB9 /* LogCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogCategory.m; sourceTree = "<group>"; };
 		CD4D822D1D82A78300D7DCB9 /* TestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
 		CD4D822E1D82A78300D7DCB9 /* TestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
-		CD8CAECF1DACBAB90047FF44 /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,10 +44,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD3DA67922A7B99900D2B29E /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				CD3DA67A22A7B99900D2B29E /* Logger.h */,
+			);
+			name = Logger;
+			path = ../Logger;
+			sourceTree = "<group>";
+		};
 		CD4D81E51D82A49A00D7DCB9 = {
 			isa = PBXGroup;
 			children = (
-				CD8CAECE1DACBAB90047FF44 /* Logger */,
+				CD3DA67922A7B99900D2B29E /* Logger */,
 				CD4D82271D82A57000D7DCB9 /* LogCategory */,
 				CD4D81F01D82A49A00D7DCB9 /* LogChinese_iOS */,
 				CD4D81EF1D82A49A00D7DCB9 /* Products */,
@@ -105,14 +114,6 @@
 			name = View;
 			sourceTree = "<group>";
 		};
-		CD8CAECE1DACBAB90047FF44 /* Logger */ = {
-			isa = PBXGroup;
-			children = (
-				CD8CAECF1DACBAB90047FF44 /* Logger.h */,
-			);
-			path = Logger;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -152,6 +153,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);

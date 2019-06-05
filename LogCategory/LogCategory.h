@@ -14,17 +14,12 @@
 // 默认启用 根据dict的key排序，不需要的话可以改成NO
 #define UseLogChineseSort YES
 
-@interface NSArray (Log)
 
-@end
-
-@interface NSDictionary (Log)
-
-@end
-
-@interface NSSet (Log)
+@interface LogCategory : NSObject
 
 @end
 
 
-// version: 1.0.1
+
+
+// version: 1.0.2

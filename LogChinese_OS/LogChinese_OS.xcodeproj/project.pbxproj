@@ -25,13 +25,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CD3DA67822A7B97500D2B29E /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
 		CD4D82111D82A50700D7DCB9 /* LogChinese_OS */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LogChinese_OS; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD4D82141D82A50700D7DCB9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CD4D82211D82A54100D7DCB9 /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
 		CD4D82221D82A54100D7DCB9 /* Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
 		CD4D82251D82A56A00D7DCB9 /* LogCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogCategory.h; sourceTree = "<group>"; };
 		CD4D82261D82A56A00D7DCB9 /* LogCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LogCategory.m; sourceTree = "<group>"; };
-		CD8CAECD1DACBAB10047FF44 /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,10 +45,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD3DA67722A7B97500D2B29E /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				CD3DA67822A7B97500D2B29E /* Logger.h */,
+			);
+			name = Logger;
+			path = ../Logger;
+			sourceTree = "<group>";
+		};
 		CD4D82081D82A50700D7DCB9 = {
 			isa = PBXGroup;
 			children = (
-				CD8CAECC1DACBAB10047FF44 /* Logger */,
+				CD3DA67722A7B97500D2B29E /* Logger */,
 				CD4D82241D82A56A00D7DCB9 /* LogCategory */,
 				CD4D82131D82A50700D7DCB9 /* LogChinese_OS */,
 				CD4D82121D82A50700D7DCB9 /* Products */,
@@ -81,14 +90,6 @@
 			);
 			name = LogCategory;
 			path = ../LogCategory;
-			sourceTree = "<group>";
-		};
-		CD8CAECC1DACBAB10047FF44 /* Logger */ = {
-			isa = PBXGroup;
-			children = (
-				CD8CAECD1DACBAB10047FF44 /* Logger.h */,
-			);
-			path = Logger;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +131,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = CD4D82081D82A50700D7DCB9;

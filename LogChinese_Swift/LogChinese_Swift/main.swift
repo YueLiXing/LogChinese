@@ -22,6 +22,7 @@ dictM.setObject(NSException.init(name: ("异常" as NSCopying) as! NSExceptionNa
 //    NSLog(@"%@", array);
 
 Logger.info(array)
+Logger.info(array.debugDescription)
 Logger.info(dict)
 Logger.info(dictM)
 //NSLog(@"%@", dictM);

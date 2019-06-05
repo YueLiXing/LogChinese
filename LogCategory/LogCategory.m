@@ -7,7 +7,7 @@
 //
 
 #import "LogCategory.h"
-//#import <objc/runtime.h>
+#import <objc/runtime.h>
 
 static NSString * const kLxArrayBegin = @"[";
 static NSString * const kLxArrayEnd = @"]";
@@ -16,19 +16,43 @@ static NSString * const kLxDictionaryEnd = @"}";
 static NSString * const kLxSetBegin = @"{(";
 static NSString * const kLxSetEnd = @")}";
 
+@implementation LogCategory
+
++ (void)load {
+    
+#ifdef UseLogChinese
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        [self exchangeDescriptionMethodWithClass:[NSArray class]];
+        [self exchangeDescriptionMethodWithClass:[NSDictionary class]];
+        [self exchangeDescriptionMethodWithClass:[NSSet class]];
+    });
+#endif
+}
+
++ (void)exchangeDescriptionMethodWithClass:(Class)aClass {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
+    method_setImplementation(class_getInstanceMethod(aClass, @selector(debugDescription)), method_getImplementation(class_getInstanceMethod(aClass, @selector(log_debugDescription))));
+    method_setImplementation(class_getInstanceMethod(aClass, @selector(description)), method_getImplementation(class_getInstanceMethod(aClass, @selector(log_description))));
+    method_setImplementation(class_getInstanceMethod(aClass, @selector(descriptionWithLocale:)), method_getImplementation(class_getInstanceMethod(aClass, @selector(log_descriptionWithLocale:))));
+    
+#pragma clang diagnostic pop
+}
+
+@end
+
 @implementation NSArray (Log)
 
-#ifdef UseLogChinese
-
-- (NSString *)debugDescription {
+- (NSString *)log_debugDescription {
     return [NSString stringWithFormat:@"<%@ %p> %@", NSStringFromClass([self class]), self, [self descriptionWithLocale:nil]];
 }
 
-- (NSString *)description {
+- (NSString *)log_description {
     return [NSString stringWithFormat:@"<%@ %p> %@", NSStringFromClass([self class]), self, [self descriptionWithLocale:nil]];
 }
 
-- (NSString *)descriptionWithLocale:(id)locale {
+- (NSString *)log_descriptionWithLocale:(id)locale {
     NSMutableString * string = [NSMutableString string];
     [string appendFormat:@"%@\n", kLxArrayBegin];
     NSUInteger count = self.count;
@@ -53,21 +77,19 @@ static NSString * const kLxSetEnd = @")}";
     return string;
 }
 
-#endif
 
 @end
 
 @implementation NSDictionary (Log)
 
-#ifdef UseLogChinese
 
-- (NSString *)debugDescription {
+- (NSString *)log_debugDescription {
     return [NSString stringWithFormat:@"<%@ %p> %@", NSStringFromClass([self class]), self, [self descriptionWithLocale:nil]];
 }
-- (NSString *)description {
+- (NSString *)log_description {
     return [NSString stringWithFormat:@"<%@ %p> %@", NSStringFromClass([self class]), self, [self descriptionWithLocale:nil]];
 }
-- (NSString *)descriptionWithLocale:(id)locale {
+- (NSString *)log_descriptionWithLocale:(id)locale {
     NSMutableString * string = [NSMutableString string];
     [string appendFormat:@"%@\n", kLxDictionaryBegin];
     NSArray * allKeys = nil;
@@ -109,25 +131,24 @@ static NSString * const kLxSetEnd = @")}";
     }
     [string appendString:kLxDictionaryEnd];
     return string;
-
+    
 }
 
-#endif
+
 @end
 
 
 
 @implementation NSSet (Log)
 
-#ifdef UseLogChinese
 
-- (NSString *)debugDescription {
+- (NSString *)log_debugDescription {
     return [NSString stringWithFormat:@"<%@ %p> %@", NSStringFromClass([self class]), self, [self descriptionWithLocale:nil]];
 }
-- (NSString *)description {
+- (NSString *)log_description {
     return [NSString stringWithFormat:@"<%@ %p> %@", NSStringFromClass([self class]), self, [self descriptionWithLocale:nil]];
 }
-- (NSString *)descriptionWithLocale:(id)locale {
+- (NSString *)log_descriptionWithLocale:(id)locale {
     NSMutableString * string = [NSMutableString string];
     [string appendFormat:@"%@\n", kLxSetBegin];
     NSUInteger count = self.count;
@@ -155,6 +176,5 @@ static NSString * const kLxSetEnd = @")}";
     
 }
 
-#endif
 @end
 
