@@ -51,7 +51,9 @@ int main(int argc, const char * argv[]) {
     [muSet addObject:@"[Test new]"];
     [muSet addObject:@1];
     NSLog(@"%@", muSet);
-    
+    Test * t = [[Test alloc] init];
+    NSLog(@"%@", t);
+    NSLog(@"%@", [t debugDescription]);
     
     return 0;
 }
