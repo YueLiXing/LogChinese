@@ -33,11 +33,23 @@ static NSString * const kLxSetEnd = @")}";
 + (void)exchangeDescriptionMethodWithClass:(Class)aClass {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wundeclared-selector"
-    method_setImplementation(class_getInstanceMethod(aClass, @selector(debugDescription)), method_getImplementation(class_getInstanceMethod(aClass, @selector(log_debugDescription))));
-    method_setImplementation(class_getInstanceMethod(aClass, @selector(description)), method_getImplementation(class_getInstanceMethod(aClass, @selector(log_description))));
-    method_setImplementation(class_getInstanceMethod(aClass, @selector(descriptionWithLocale:)), method_getImplementation(class_getInstanceMethod(aClass, @selector(log_descriptionWithLocale:))));
+    [self exchangeIMP:aClass OrginSel:@selector(debugDescription) NewSel:@selector(log_debugDescription)];
+    [self exchangeIMP:aClass OrginSel:@selector(description) NewSel:@selector(log_description)];
+    [self exchangeIMP:aClass OrginSel:@selector(descriptionWithLocale:) NewSel:@selector(log_descriptionWithLocale:)];
     
 #pragma clang diagnostic pop
+}
++ (void)exchangeIMP:(Class)aClass OrginSel:(SEL)orginalSel NewSel:(SEL)newSel {
+    Method originalMethod = class_getInstanceMethod(aClass, orginalSel);
+    Method swizzledMethod = class_getInstanceMethod(aClass, newSel);
+    BOOL didAddMethod = class_addMethod(aClass, orginalSel, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod));
+//    NSLog(@"--- %@ %d", aClass, didAddMethod);
+    if (didAddMethod) {
+        class_replaceMethod(aClass, newSel, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
+    } else {
+        method_exchangeImplementations(originalMethod, swizzledMethod);
+    }
+    
 }
 
 @end
