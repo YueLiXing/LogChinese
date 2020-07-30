@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LogChinese'
-  s.version          = '1.0.3'
+  s.version          = '1.0.4'
   s.summary          = '显示数组里的中文'
 
 # This description is used to generate tags and improve search results.
