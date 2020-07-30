@@ -8,18 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-// 如果需要关掉兼容中文的打印，把下面的宏注释掉即可
-#define UseLogChinese
-
-// 默认启用 根据dict的key排序，不需要的话可以改成NO
-#define UseLogChineseSort YES
-
-
 @interface LogCategory : NSObject
 
++ (void)unableLogCategory;
+
++ (void)setUseLogChineseSort:(BOOL)useSort;
+
 @end
-
-
-
-
-// version: 1.0.2

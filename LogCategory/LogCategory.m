@@ -16,18 +16,31 @@ static NSString * const kLxDictionaryEnd = @"}";
 static NSString * const kLxSetBegin = @"{(";
 static NSString * const kLxSetEnd = @")}";
 
+static BOOL UseLogChineseSort = YES;
+
 @implementation LogCategory
 
-+ (void)load {
-    
-#ifdef UseLogChinese
++ (void)setUseLogChineseSort:(BOOL)useSort {
+    UseLogChineseSort = useSort;
+}
+
++ (void)unableLogCategory {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         [self exchangeDescriptionMethodWithClass:[NSArray class]];
         [self exchangeDescriptionMethodWithClass:[NSDictionary class]];
         [self exchangeDescriptionMethodWithClass:[NSSet class]];
     });
-#endif
+}
+
+
++ (void)load {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        [self exchangeDescriptionMethodWithClass:[NSArray class]];
+        [self exchangeDescriptionMethodWithClass:[NSDictionary class]];
+        [self exchangeDescriptionMethodWithClass:[NSSet class]];
+    });
 }
 
 + (void)exchangeDescriptionMethodWithClass:(Class)aClass {
@@ -36,7 +49,6 @@ static NSString * const kLxSetEnd = @")}";
     [self exchangeIMP:aClass OrginSel:@selector(debugDescription) NewSel:@selector(log_debugDescription)];
     [self exchangeIMP:aClass OrginSel:@selector(description) NewSel:@selector(log_description)];
     [self exchangeIMP:aClass OrginSel:@selector(descriptionWithLocale:) NewSel:@selector(log_descriptionWithLocale:)];
-    
 #pragma clang diagnostic pop
 }
 + (void)exchangeIMP:(Class)aClass OrginSel:(SEL)orginalSel NewSel:(SEL)newSel {
