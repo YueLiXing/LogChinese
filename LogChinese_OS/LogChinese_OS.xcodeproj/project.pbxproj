@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		CD4D82151D82A50700D7DCB9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4D82141D82A50700D7DCB9 /* main.m */; };
 		CD4D82231D82A54100D7DCB9 /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4D82221D82A54100D7DCB9 /* Test.m */; };
-		CD4D822B1D82A6F800D7DCB9 /* LogCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4D82261D82A56A00D7DCB9 /* LogCategory.m */; };
+		CDBF400424D2D0AA005A44E8 /* LogCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CDBF400324D2D0AA005A44E8 /* LogCategory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,8 +30,8 @@
 		CD4D82141D82A50700D7DCB9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CD4D82211D82A54100D7DCB9 /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
 		CD4D82221D82A54100D7DCB9 /* Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
-		CD4D82251D82A56A00D7DCB9 /* LogCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogCategory.h; sourceTree = "<group>"; };
-		CD4D82261D82A56A00D7DCB9 /* LogCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LogCategory.m; sourceTree = "<group>"; };
+		CDBF400224D2D0AA005A44E8 /* LogCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogCategory.h; sourceTree = "<group>"; };
+		CDBF400324D2D0AA005A44E8 /* LogCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogCategory.m; sourceTree = "<group>"; };
 		CDC142DB233DB8C300106B68 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -59,7 +59,6 @@
 			isa = PBXGroup;
 			children = (
 				CD3DA67722A7B97500D2B29E /* Logger */,
-				CD4D82241D82A56A00D7DCB9 /* LogCategory */,
 				CD4D82131D82A50700D7DCB9 /* LogChinese_OS */,
 				CD4D82121D82A50700D7DCB9 /* Products */,
 			);
@@ -76,6 +75,7 @@
 		CD4D82131D82A50700D7DCB9 /* LogChinese_OS */ = {
 			isa = PBXGroup;
 			children = (
+				CDBF400124D2D0AA005A44E8 /* LogChinese */,
 				CD4D82141D82A50700D7DCB9 /* main.m */,
 				CD4D82211D82A54100D7DCB9 /* Test.h */,
 				CD4D82221D82A54100D7DCB9 /* Test.m */,
@@ -84,14 +84,14 @@
 			path = LogChinese_OS;
 			sourceTree = "<group>";
 		};
-		CD4D82241D82A56A00D7DCB9 /* LogCategory */ = {
+		CDBF400124D2D0AA005A44E8 /* LogChinese */ = {
 			isa = PBXGroup;
 			children = (
-				CD4D82251D82A56A00D7DCB9 /* LogCategory.h */,
-				CD4D82261D82A56A00D7DCB9 /* LogCategory.m */,
+				CDBF400224D2D0AA005A44E8 /* LogCategory.h */,
+				CDBF400324D2D0AA005A44E8 /* LogCategory.m */,
 			);
-			name = LogCategory;
-			path = ../LogCategory;
+			name = LogChinese;
+			path = ../../LogChinese;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,9 +151,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD4D822B1D82A6F800D7DCB9 /* LogCategory.m in Sources */,
 				CD4D82151D82A50700D7DCB9 /* main.m in Sources */,
 				CD4D82231D82A54100D7DCB9 /* Test.m in Sources */,
+				CDBF400424D2D0AA005A44E8 /* LogCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

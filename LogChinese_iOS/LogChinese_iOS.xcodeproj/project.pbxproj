@@ -12,7 +12,6 @@
 		CD4D81F91D82A49A00D7DCB9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4D81F81D82A49A00D7DCB9 /* ViewController.m */; };
 		CD4D81FE1D82A49A00D7DCB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD4D81FD1D82A49A00D7DCB9 /* Assets.xcassets */; };
 		CD4D82011D82A49A00D7DCB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD4D81FF1D82A49A00D7DCB9 /* LaunchScreen.storyboard */; };
-		CD4D822A1D82A57000D7DCB9 /* LogCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4D82291D82A57000D7DCB9 /* LogCategory.m */; };
 		CD4D822F1D82A78300D7DCB9 /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4D822E1D82A78300D7DCB9 /* TestView.m */; };
 /* End PBXBuildFile section */
 
@@ -27,8 +26,6 @@
 		CD4D81FD1D82A49A00D7DCB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD4D82001D82A49A00D7DCB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD4D82021D82A49A00D7DCB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CD4D82281D82A57000D7DCB9 /* LogCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogCategory.h; sourceTree = "<group>"; };
-		CD4D82291D82A57000D7DCB9 /* LogCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogCategory.m; sourceTree = "<group>"; };
 		CD4D822D1D82A78300D7DCB9 /* TestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
 		CD4D822E1D82A78300D7DCB9 /* TestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -57,7 +54,6 @@
 			isa = PBXGroup;
 			children = (
 				CD3DA67922A7B99900D2B29E /* Logger */,
-				CD4D82271D82A57000D7DCB9 /* LogCategory */,
 				CD4D81F01D82A49A00D7DCB9 /* LogChinese_iOS */,
 				CD4D81EF1D82A49A00D7DCB9 /* Products */,
 			);
@@ -93,16 +89,6 @@
 				CD4D81F21D82A49A00D7DCB9 /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		CD4D82271D82A57000D7DCB9 /* LogCategory */ = {
-			isa = PBXGroup;
-			children = (
-				CD4D82281D82A57000D7DCB9 /* LogCategory.h */,
-				CD4D82291D82A57000D7DCB9 /* LogCategory.m */,
-			);
-			name = LogCategory;
-			path = ../LogCategory;
 			sourceTree = "<group>";
 		};
 		CD4D822C1D82A77200D7DCB9 /* View */ = {
@@ -184,7 +170,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD4D822A1D82A57000D7DCB9 /* LogCategory.m in Sources */,
 				CD4D81F91D82A49A00D7DCB9 /* ViewController.m in Sources */,
 				CD4D822F1D82A78300D7DCB9 /* TestView.m in Sources */,
 				CD4D81F61D82A49A00D7DCB9 /* AppDelegate.m in Sources */,
