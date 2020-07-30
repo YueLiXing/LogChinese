@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
 用以解决控制台日志输出中文，显示乱码的问题
                        DESC
 
-  s.homepage         = 'https://gitee.com/ylx12138/LogChinese'
+  s.homepage         = 'https://github.com/YueLiXing/LogChinese'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { '1223343444@qq.com' => '1223343444@qq.com' }
@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'LogChinese/**/*'
+  s.source_files = 'LogChinese/*.{h,m}'
   
   # s.resource_bundles = {
   #   'LogChinese' => ['LogChinese/Assets/*.png']
